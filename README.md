@@ -8,6 +8,8 @@ Gleam SMTP client! (built on top of [`gen_smtp`](https://hex.pm/packages/gen_smt
 It is a type-safe and friendly wrapper on top of the excellent [`gen_smtp`](https://hexdocs.pm/gen_smtp) Erlang library.
 Currently, it supports sending mails via. blocking the current process, but I will add support for non-blocking delivery soon.
 
+I also plan on adding attachments support later.
+
 ```sh
 gleam add gleamail@1
 ```
