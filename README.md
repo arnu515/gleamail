@@ -139,6 +139,5 @@ Further documentation can be found at <https://hexdocs.pm/gleamail>.
 ## Development
 
 ```sh
-gleam run   # Run the above example
 gleam test  # Run the tests
 ```
