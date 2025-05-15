@@ -75,6 +75,21 @@ fn populate_mail_headers_dict(
   }
 }
 
+pub type AttachmentEncoding {
+  Base64
+  QuotedPrintable
+  Ascii
+}
+
+pub type MailAttachment {
+  MailAttachment(
+    content: BitArray,
+    filename: String,
+    mime_type: #(String, String),
+    encoding: AttachmentEncoding,
+  )
+}
+
 /// Create a Mail using [`make`](#make)
 pub type Mail {
   /// Do NOT construct a Mail by yourself, but use the convenience
@@ -86,6 +101,7 @@ pub type Mail {
     cc: List(Address),
     bcc: List(Address),
     body: List(Body),
+    attachments: List(MailAttachment),
     extra_headers: List(MailHeader),
   )
 }
